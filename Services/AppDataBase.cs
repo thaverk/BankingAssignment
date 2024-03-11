@@ -32,17 +32,17 @@ namespace BankingAssignment.Services
          _dbconnection.CreateTable<Client>();
            
         }
-      
-        public  void SaveClient(Client client)
+        public void SaveClient(Client client)
         {
-
-
-           _dbconnection.Insert(client);
+         _dbconnection.Insert(client);
         }
         public void UpdateClient(Client client)
         {
             _dbconnection.Update(client);
         }
+       
+        
+       
 
         public Client GetClientById(int id)
         {

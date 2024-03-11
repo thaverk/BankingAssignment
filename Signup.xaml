@@ -11,13 +11,15 @@
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        
         <Entry Placeholder="First Name" BindingContext="{Binding CurrentClient.ClientName}"/>
         <Entry Placeholder="Surname"  BindingContext="{Binding CurrentClient.ClientSurname}"/>
 
 
         <Button  Clicked="Button_Click" Margin="5" Text="Save"/>
-        <Button  Clicked="ReloadButton_Clicked" Margin="5" Text="Save"/>
         <Label Text="{Binding CurrentClient.ClientName}" />
+        <Button  Clicked="ReloadButton_Clicked" Margin="5" Text="Reload"/>
+       
         
 
 

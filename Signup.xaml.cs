@@ -18,32 +18,35 @@ public partial class Signup : ContentPage
 		InitializeComponent();
         _appData = new AppDataBase();
         BindingContext = this;
+        OnPropertyChanged();
        
 	}
+   
+    
 
-
-  
-    private void Button_Click(object sender, EventArgs e)
-    {
-
-        _appData.UpdateClient(CurrentClient);
-
-    }
     private void LoadData()
     {
         Client client = _appData.GetClientById(1);
 
         CurrentClient = client;
 
-        
+
 
     }
+
+    private void Button_Click(object sender, EventArgs e)
+    {
+        _appData.SaveClient(CurrentClient);
+        _appData.UpdateClient(CurrentClient);
+       
+
+    }
+
     private void ReloadButton_Clicked(object sender, EventArgs e)
-    { 
+    {
         LoadData();
     }
 
-   
 
-   
+
 }
