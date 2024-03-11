@@ -22,12 +22,7 @@ public partial class Signup : ContentPage
 	}
 
 
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
-
-        LoadData();
-    }
+  
     private void Button_Click(object sender, EventArgs e)
     {
 
@@ -40,19 +35,15 @@ public partial class Signup : ContentPage
 
         CurrentClient = client;
 
-        _appData.DeleteClientById(CurrentClient.ClientId);
+        
 
     }
     private void ReloadButton_Clicked(object sender, EventArgs e)
-    {
-        _appData.DeleteClientById(CurrentClient.ClientId);
+    { 
         LoadData();
     }
 
    
 
-   /* private void Button_Clicked(object sender, EventArgs e)
-    {
-        _appData.DeleteClientById(CurrentClient.ClientId);
-    }*/
+   
 }

@@ -54,6 +54,6 @@ namespace BankingAssignment.Services
             return client;
         }
 
-        public void DeleteClientById(int id) { _dbconnection.Delete<Client>(id); }
+       
     }
 }
