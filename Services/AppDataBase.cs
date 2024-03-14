@@ -11,7 +11,7 @@ namespace BankingAssignment.Services
 {
     public class AppDataBase
     {
-        private SQLiteConnection _dbconnection;
+        public SQLiteConnection _dbconnection;
     
         public string GetDatabasePath() 
         
@@ -30,19 +30,23 @@ namespace BankingAssignment.Services
         { 
         _dbconnection=new SQLiteConnection(GetDatabasePath());
          _dbconnection.CreateTable<Client>();
-           
+         
         }
+
+
+      
+
+
         public void SaveClient(Client client)
         {
-         _dbconnection.Insert(client);
+            
+            _dbconnection.Insert(client);
+           
         }
         public void UpdateClient(Client client)
         {
             _dbconnection.Update(client);
         }
-       
-        
-       
 
         public Client GetClientById(int id)
         {
@@ -54,6 +58,9 @@ namespace BankingAssignment.Services
             return client;
         }
 
-       
+
+
+
+
     }
 }

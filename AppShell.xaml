@@ -11,5 +11,24 @@
         Title="Home"
         ContentTemplate="{DataTemplate local:Signup}"
         Route="SignUp" />
+    <TabBar>
+        <Tab Title="Home" Icon="hometab.svg">
+            <ShellContent ContentTemplate="{DataTemplate local:ShoppingPage}" Route="HomePage"/>
+        </Tab>
 
+
+        <Tab Title="Home" Icon="hometab.svg">
+            <ShellContent ContentTemplate="{DataTemplate local:ShoppingCart}" Route="ShoppingCart"/>
+        </Tab>
+
+
+
+        <Tab Title="Home" Icon="hometab.svg">
+            <ShellContent ContentTemplate="{DataTemplate local:Profile}" Route="Profile"/>
+        </Tab>
+
+       
+    </TabBar>
+ 
+    
 </Shell>
